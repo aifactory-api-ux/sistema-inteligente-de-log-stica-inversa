@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Build outputs
+dist
+build
+*.tsbuildinfo
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs
+
+# Testing
+coverage
+
+# Documentation
+*.md
+docs/
+
+# Opencode
+.opencode
+
+# Docker
+docker-compose*.yml
+Dockerfile

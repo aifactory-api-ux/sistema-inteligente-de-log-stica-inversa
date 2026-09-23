@@ -1,0 +1,732 @@
+openapi: 3.1.0
+info:
+  title: Derived API Contract
+  version: 1.0.0
+paths:
+  /admin/config:
+    get:
+      operationId: get_admin_config
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+    put:
+      operationId: put_admin_config
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /admin/prompts:
+    get:
+      operationId: get_admin_prompts
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      operationId: post_admin_prompts
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /admin/prompts/{version}/activate:
+    put:
+      operationId: put_admin_prompts_version_activate
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /admin/scoring-weights:
+    get:
+      operationId: get_admin_scoring_weights
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+    put:
+      operationId: put_admin_scoring_weights
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/auth/login:
+    post:
+      operationId: post_auth_login
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/auth/logout:
+    post:
+      operationId: post_auth_logout
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/auth/me:
+    get:
+      operationId: get_auth_me
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/auth/refresh:
+    post:
+      operationId: post_auth_refresh
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /batches:
+    get:
+      operationId: get_batches
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /batches/upload:
+    post:
+      operationId: post_batches_upload
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /batches/{batch_id}:
+    delete:
+      operationId: delete_batches_batch_id
+      responses:
+        '204':
+          description: Derived from SPEC.md
+    get:
+      operationId: get_batches_batch_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /batches/{batch_id}/approve:
+    post:
+      operationId: post_batches_batch_id_approve
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /batches/{batch_id}/reject:
+    post:
+      operationId: post_batches_batch_id_reject
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/control-tower/alerts:
+    get:
+      operationId: get_control_tower_alerts
+      responses:
+        '200':
+          description: Get active alerts
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/control-tower/alerts/{alert_id}/acknowledge:
+    post:
+      operationId: post_control_tower_alerts_alert_id_acknowledge
+      responses:
+        '201':
+          description: Acknowledge an alert
+          content:
+            application/json:
+              schema:
+                type: object
+  /control-tower/distribution:
+    get:
+      operationId: get_control_tower_distribution
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /control-tower/kpis:
+    get:
+      operationId: get_control_tower_kpis
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /control-tower/realtime:
+    get:
+      operationId: get_control_tower_realtime
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /control-tower/returns:
+    get:
+      operationId: get_control_tower_returns
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /decision/evaluate:
+    post:
+      operationId: post_decision_evaluate
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /decision/explain/{return_id}:
+    get:
+      operationId: get_decision_explain_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /decision/rules:
+    get:
+      operationId: get_decision_rules
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /decision/scoring:
+    get:
+      operationId: get_decision_scoring
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /dropoff/instructions/{return_id}:
+    get:
+      operationId: get_dropoff_instructions_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /dropoff/points:
+    get:
+      operationId: get_dropoff_points
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /dropoff/points/{point_id}:
+    get:
+      operationId: get_dropoff_points_point_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /dropoff/qr/{return_id}:
+    get:
+      operationId: get_dropoff_qr_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /health:
+    get:
+      operationId: get_health
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /health/live:
+    get:
+      operationId: get_health_live
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /health/ready:
+    get:
+      operationId: get_health_ready
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /kam/approval-history:
+    get:
+      operationId: get_kam_approval_history
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /kam/approvals:
+    post:
+      operationId: post_kam_approvals
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /kam/approvals/{approval_id}:
+    post:
+      operationId: post_kam_approvals_approval_id
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /kam/pending-approvals:
+    get:
+      operationId: get_kam_pending_approvals
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /kam/rejections/{approval_id}:
+    post:
+      operationId: post_kam_rejections_approval_id
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /metrics:
+    get:
+      operationId: get_metrics
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /pickup/schedule:
+    post:
+      operationId: post_pickup_schedule
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /pickup/slots:
+    get:
+      operationId: get_pickup_slots
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /pickup/{return_id}:
+    delete:
+      operationId: delete_pickup_return_id
+      responses:
+        '204':
+          description: Derived from SPEC.md
+    get:
+      operationId: get_pickup_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /pickup/{return_id}/reschedule:
+    put:
+      operationId: put_pickup_return_id_reschedule
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/reports:
+    get:
+      operationId: get_reports
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/reports/generate:
+    post:
+      operationId: post_reports_generate
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /api/v1/reports/{report_id}:
+    get:
+      operationId: get_reports_report_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/reports/{report_id}/download:
+    get:
+      operationId: get_reports_report_id_download
+      responses:
+        '200':
+          description: Download report file
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+            text/html:
+              schema:
+                type: string
+                format: binary
+            text/csv:
+              schema:
+                type: string
+                format: binary
+        '404':
+          description: Report not found
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Report not ready for download
+          content:
+            application/json:
+              schema:
+                type: object
+  /returns:
+    get:
+      operationId: get_returns
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      operationId: post_returns
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /returns/trace/{trace_id}:
+    get:
+      operationId: get_returns_trace_trace_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /returns/{id}/tracking:
+    get:
+      operationId: get_returns_id_tracking
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /returns/{return_id}:
+    delete:
+      operationId: delete_returns_return_id
+      responses:
+        '204':
+          description: Derived from SPEC.md
+    get:
+      operationId: get_returns_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+    put:
+      operationId: put_returns_return_id
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /returns/{return_id}/acknowledge:
+    post:
+      operationId: post_returns_return_id_acknowledge
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /returns/{return_id}/evaluate:
+    post:
+      operationId: post_returns_return_id_evaluate
+      responses:
+        '201':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /returns/{return_id}/tracking:
+    get:
+      operationId: get_returns_return_id_tracking
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
+  /version:
+    get:
+      operationId: get_version
+      responses:
+        '200':
+          description: Derived from SPEC.md
+          content:
+            application/json:
+              schema:
+                type: object
